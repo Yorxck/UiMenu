@@ -1,7 +1,7 @@
 # Arduino Menu Library
 This is a menu library for the ssd1306 0.94 inch display.
 
-##Usage
+## Usage
 ### Menu
 ```cpp
   #include "Menu.h"
