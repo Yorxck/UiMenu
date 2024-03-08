@@ -38,6 +38,12 @@ Basic functions for all MenuItems:
 
 Add MenuItem to a page
 ```cpp
+  page.addItem(&menuItem);
+  page.addItem(&secondMenuItem);
+  page.addItem(&thirdMenuItem);
+
+  // or
+
   page.addItem(&menuItem)
       -> addItem(&secondMenuItem)
       -> addItem(&thirdMenuItem);
