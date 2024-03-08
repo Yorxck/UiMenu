@@ -5,5 +5,5 @@ This is a menu library for the ssd1306 0.94 inch display.
 ```cpp
   #include "Menu.h"
 
-  Menu menu; -- Creates a new menu instance
+  Menu menu; // Creates a new menu instance
 ```
