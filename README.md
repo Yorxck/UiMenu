@@ -120,3 +120,37 @@ void Callback(bool state) {
 Checkbox checkbox("Checkbox!", true, &Callback);
 Checkbox checkbox("Checkbox!", &Callback);
 ```
+
+You can also manually change the value of a checkbox using the setState or toggleState function
+```cpp
+checkbox.setState(false);
+checkbox.setState(true);
+
+checkbox.toggleState();
+```
+
+In the same way you can get the state of the checkbox using
+```cpp
+bool state = checkbox.getState();
+```
+
+### NumberInput
+The numberinput is a MenuItem where you can set a number or display a number
+
+```cpp
+uint8_t default_value = 1;
+uint8_t min_value = 1;
+uint8_t max_value = 10;
+
+NumberInput numberInput("NumberInput", default_value, min_value, max_value);
+
+// You can also do the same but with a callback
+
+void Callback(uint8_t value) {
+  Serial.print("NumberInput changed: ");
+  Serial.println(value);
+}
+
+NumberInput numberInput("NumberInput", default_value, min_value, max_value, &Callback);
+```
+
