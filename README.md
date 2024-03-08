@@ -43,7 +43,7 @@ to display a page to the menu you can use the setPage function
 newMenu.setPage(page);
 ```
 
-### Menu Items
+## Menu Items
 Menu Items are the items you can add to a page to give your menu a interface.
 
 ### Basics
