@@ -154,3 +154,9 @@ void Callback(uint8_t value) {
 NumberInput numberInput("NumberInput", default_value, min_value, max_value, &Callback);
 ```
 
+To change the value of the NumberInput you can use the following functions
+```cpp
+numberInput.increase(1);
+numberInput.decrease(1);
+numberInput.setValue(5);
+```
