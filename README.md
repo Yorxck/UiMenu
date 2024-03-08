@@ -19,6 +19,19 @@ if (!success) {
 }
 ```
 
+to controll your position on the menu you can call these functions\
+```cpp
+newMenu.up(); // Moves you up in the menu
+newMenu.down(); // Moves you down in the menu
+newMenu.right(); // Activates the currectly selected item
+newMenu.left(); // Activates the currectly selected item
+```
+
+You can also manually refresh the display, it will automatically update the display when you set the page or move in the menu
+```cpp
+newMenu.refresh();
+```
+
 ### Pages
 ```cpp
 Page page; // Creates a new Page instance
@@ -54,6 +67,13 @@ Set title function for a menu item is used to set the item's title
 menuItem.setTitle("Hello World!");
 ```
 
+To disable the MenuItem so that the user cannot activate it you can use
+```cpp
+menuItem.enabled = false;
+
+menuItem.enabled = true;
+```
+
 ### Label
 The label item is used to display a text or value to the menu.
 
@@ -78,4 +98,21 @@ Button button("Hello World!", &Callback);
 Button button("Hello World!", [](){
   Serial.println("Button Clicked");
 });
+```
+
+### Checkbox
+the checknox is used to toggle a value or display a value inside of the menu
+
+```cpp
+Checkbox checkbox("Checkbox!");
+// Or
+Checkbox checkbox("Checkbox!", true); // default state
+// Or
+void Callback(bool state) {
+  Serial.print("Checkbox toggled: ");
+  Serial.println(state);
+}
+
+Checkbox checkbox("Checkbox!", true, &Callback);
+Checkbox checkbox("Checkbox!", &Callback);
 ```
