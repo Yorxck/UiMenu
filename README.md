@@ -21,13 +21,32 @@ if (!success) {
 
 ### Pages
 ```cpp
-Page start; // Creates a new Page instance
+Page page; // Creates a new Page instance
 Page settings;
 ```
 
-to display a page to the menu you can use the sePage function
+to display a page to the menu you can use the setPage function
 ```cpp
-newMenu.setPage(start);
+newMenu.setPage(page);
 ```
 
 ### Menu Items
+Menu Items are the items you can add to a page to give your menu a interface.
+
+### Basics
+Basic functions for all MenuItems:
+
+Add MenuItem to a page
+```cpp
+  page.addItem(&menuItem)
+      -> addItem(&secondMenuItem)
+      -> addItem(&thirdMenuItem);
+```
+
+Set title function for a menu item is used to set the item's title
+```cpp
+  menuItem.setTitle("Hello World!");
+```
+
+### Label
+The label item is used to display 
