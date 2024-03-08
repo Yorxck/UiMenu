@@ -38,21 +38,44 @@ Basic functions for all MenuItems:
 
 Add MenuItem to a page
 ```cpp
-  page.addItem(&menuItem);
-  page.addItem(&secondMenuItem);
-  page.addItem(&thirdMenuItem);
+page.addItem(&menuItem);
+page.addItem(&secondMenuItem);
+page.addItem(&thirdMenuItem);
 
-  // or
+// or
 
-  page.addItem(&menuItem)
-      -> addItem(&secondMenuItem)
-      -> addItem(&thirdMenuItem);
+page.addItem(&menuItem)
+    -> addItem(&secondMenuItem)
+    -> addItem(&thirdMenuItem);
 ```
 
 Set title function for a menu item is used to set the item's title
 ```cpp
-  menuItem.setTitle("Hello World!");
+menuItem.setTitle("Hello World!");
 ```
 
 ### Label
-The label item is used to display 
+The label item is used to display a text or value to the menu.
+
+```cpp
+Label label("Hello World!");
+
+page.addItem(&label);
+```
+
+### Button
+The button item is used to have a callback called when the user activates it.
+
+```cpp
+void Callback() {
+  Serial.println("Button Clicked");
+}
+
+Button button("Hello World!", &Callback);
+
+// Or
+
+Button button("Hello World!", [](){
+  Serial.println("Button Clicked");
+});
+```
