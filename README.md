@@ -105,9 +105,13 @@ the checknox is used to toggle a value or display a value inside of the menu
 
 ```cpp
 Checkbox checkbox("Checkbox!");
-// Or
-Checkbox checkbox("Checkbox!", true); // default state
-// Or
+
+// Initialize with set state
+
+Checkbox checkbox("Checkbox!", true);
+
+// Initialize with callback
+
 void Callback(bool state) {
   Serial.print("Checkbox toggled: ");
   Serial.println(state);
